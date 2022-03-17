@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .progress-outer {
+            width: 200px;
+            height: 15px;
+            background-color: lightgray;
+            margin-bottom: 10px;
+        }
+
+        .progress-inner {
+            height: 100%;
+            width: 0;
+            background-color: steelblue;
+        }
+
+        .active {
+            animation: progress 3s forwards;
+        }
+
+        @keyframes progress {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Progress bar</h1>
+    <button id="addProgress" onclick="start();">Click to Add Progress Bar</button>
+    <template id="progress-template">
+        <div class="progress-outer">
+            <div class="progress-inner">
+
+            </div>
+        </div>
+    </template>
+    <div class="container"></div>
+    <script src="progress.js"></script>
+</body>
+
+</html>
